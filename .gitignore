@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# uv
+**/uv.lock
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data/Models (if large)
+**/data/raw/*
+**/data/processed/*
+**/models/*
+!**/data/raw/.gitkeep
+!**/data/processed/.gitkeep
+!**/models/.gitkeep

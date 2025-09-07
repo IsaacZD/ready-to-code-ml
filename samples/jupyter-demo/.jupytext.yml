@@ -1,0 +1,29 @@
+# This file configures automatic conversion between .ipynb and .py formats
+formats: "ipynb,py:percent"
+
+# Notebook metadata to preserve
+notebook_metadata_filter: "-all"
+
+# Cell metadata to preserve
+cell_metadata_filter: "tags,-all"
+
+# Comment format for percent scripts
+comment_magics: true
+
+# Auto-sync on save (VS Code integration)
+# When you save a .ipynb file, it automatically updates the .py version
+# When you save a .py file, it automatically updates the .ipynb version
+auto_sync: true
+
+# Text representation settings
+text_representation:
+  extension: .py
+  format_name: percent
+  format_version: '1.3'
+  jupytext_version: 1.16.0
+
+# Kernel specification
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
