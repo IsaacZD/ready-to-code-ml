@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  ml-dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: ready-to-code-ml:latest
+    container_name: ready-to-code-ml-container
+    volumes:
+      - ..:/lab:cached
+    env_file:
+      - .env
+    command: sleep infinity

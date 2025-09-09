@@ -1,13 +1,8 @@
 {
-  "name": "Python Samples Environment",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "containerEnv": {
-    "UV_LINK_MODE": "copy",
-    "PYTHONUNBUFFERED": "1"
-  },
+  "name": "Ready-to-Code ML Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "ml-dev",
+  "workspaceFolder": "/lab",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "installZsh": true,
