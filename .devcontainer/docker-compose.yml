@@ -11,3 +11,11 @@ services:
     env_file:
       - .env
     command: sleep infinity
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: cdi
+              capabilities: [gpu]
+              device_ids:
+                - nvidia.com/gpu=all

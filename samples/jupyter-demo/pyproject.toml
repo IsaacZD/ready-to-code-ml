@@ -16,14 +16,12 @@ dependencies = [
     "seaborn>=0.12.0",
     "jupytext>=1.17.2",
     "scipy>=1.16.1",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
 ]
 
 [project.optional-dependencies]
-dev = [
-    "papermill>=2.5.0",
-    "nbdime>=4.0.0",
-    "memory-profiler>=0.61.0",
-]
+dev = ["papermill>=2.5.0", "nbdime>=4.0.0", "memory-profiler>=0.61.0"]
 
 [build-system]
 requires = ["hatchling"]
@@ -34,3 +32,16 @@ sources = ["src"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/text_preprocessing"]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+    { index = "pytorch-cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
